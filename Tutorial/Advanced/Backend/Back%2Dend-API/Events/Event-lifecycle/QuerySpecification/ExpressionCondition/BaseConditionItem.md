@@ -1,0 +1,17 @@
+# Class Definition
+- ConditionName
+  - `string`
+- MatchValues
+  - `object[]`
+  - When multiple parameters are passed in, the relationship between the parameters is `or`.
+- ConditionOperator
+  - `enum`
+    - `equals`: The EQUAL operator is used to select specific values.
+    - `like`: The LIKE is used to extract records where a particular pattern is present.
+    - `contains`: The CONTAINS is used to search the data in the full-text index library.
+    - `between`: The BETWEEN operator is used to select values within a given range.
+    - `notEquals`
+    - `notLike`
+- OrderNum
+  - `int`
+  - Used to distinguish conditions, especially when `ExpressionCondition.ExpressionType` is logicalExpression，You need to build a logical expression through `OrderNum`.
